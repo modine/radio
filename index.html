@@ -1,16 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<title>Radiokanaler</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+	margin-right: 15%;
+	margin-left: 15%;
+}
+
+
+.header {
+    
+    padding: 10px;
+    text-align: center;
+}
+
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    height: 80px;
+    
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.footer {
+   
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 50%;
+    }
+}
+@media (max-width: 300px) {
+    .column {
+        width: 100%;
+    }
+}
+div.column:hover {
+    background-color: grey;
+    opacity: 0.3;
+}
+
+img.displayed {
+    display: block;
+    margin: 0 auto;}
+</style>
+
+</head>
 <body>
 	
-<p><a href="https://radio.nrk.no/direkte/p1" target="iframe_a">P1</a></p>
-<p><a href="https://radio.nrk.no/direkte/p2" target="iframe_a">P2</a></p>	
-<p><a href="https://radio.nrk.no/direkte/p3" target="iframe_a">P3</a></p>
-<p><a href="https://radio.nrk.no/direkte/jazz" target="iframe_a">NRK Jazz</a></p>
-<p><a href="https://radio.nrk.no/direkte/klassisk" target="iframe_a">NRK Klassisk</a></p>
-<p><a href="https://p4.no/player/?channel=5" target="iframe_a">P4 Retro</a></p>
 
-<iframe height="150px" width="100%" src="https://radio.nrk.no/direkte/P1" name="iframe_a"></iframe>
+<div class="header">
+  <h2>Radiokanaler</h2>
+ 
+</div>
 
+<div class="row">
+  <a href="https://radio.nrk.no/direkte/p1" target="iframe_a"><div class="column"><img class="displayed" src="p1.png" width="100%"></div></a>
+  <a href="https://radio.nrk.no/direkte/p2" target="iframe_a"><div class="column"><img src="p2.png" width="100%"></div></a>
+  <a href="https://radio.nrk.no/direkte/p3" target="iframe_a"><div class="column"><img src="p3.png" width="100%"></div></a>
+  <a href="https://radio.nrk.no/direkte/jazz" target="iframe_a"><div class="column"><img class="displayed" src="jazz.png" width="100%"></div></a>
+
+</div>
+
+<div class="row">
+  <a href="https://radio.nrk.no/direkte/klassisk" target="iframe_a"><div class="column"><img src="klassisk.png" width="100%"></div></a>
+  <a href="https://radio.nrk.no/direkte/alltid_nyheter" target="iframe_a"><div class="column"><img src="nyheter.png" width="100%"></div></a>
+  <a href="https://radio.nrk.no/direkte/radioresepsjonen" target="iframe_a"><div class="column"><img src="rr.png" width="100%"></div></a>
+  <a href="https://p4.no/player/?channel=5" target="iframe_a"><div class="column"><img src="p4retro.png" height="100%"></div></a>
+</div>
+
+<div class="footer">
+  <iframe height="100%" width="100%" src="" name="iframe_a"></iframe>
+</div>
 
 </body>
 </html>
